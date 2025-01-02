@@ -1,0 +1,49 @@
+{
+  "restaurants": [
+    {
+      "id": 1,
+      "imageUrl": "https://via.placeholder.com/150/0000FF/808080?text=Dominos",
+      "description": {
+        "name": "Dominos",
+        "rating": 4.5,
+        "eta": "30min"
+      }
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://via.placeholder.com/150/FF0000/FFFFFF?text=McDonald's",
+      "description": {
+        "name": "McDonald's",
+        "rating": 4.2,
+        "eta": "25min"
+      }
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://via.placeholder.com/150/FFFF00/000000?text=KFC",
+      "description": {
+        "name": "KFC",
+        "rating": 4.3,
+        "eta": "20min"
+      }
+    },
+    {
+      "id": 4,
+      "imageUrl": "https://via.placeholder.com/150/00FF00/000000?text=Pizza+Hut",
+      "description": {
+        "name": "Pizza Hut",
+        "rating": 4.1,
+        "eta": "35min"
+      }
+    },
+    {
+      "id": 5,
+      "imageUrl": "https://via.placeholder.com/150/FFFFFF/000000?text=Starbucks",
+      "description": {
+        "name": "Starbucks",
+        "rating": 4.6,
+        "eta": "15min"
+      }
+    }
+  ]
+}

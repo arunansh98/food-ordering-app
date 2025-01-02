@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .outline-auto {
+    outline: auto;
+  }
+}
+
+input {
+  @apply border-solid border-[grey] border-[1.5px] rounded-[5px] outline-none p-[0.4rem];
+}
+
+input,
+input::placeholder {
+  @apply text-center text-[1.5rem] m-auto;
+}
