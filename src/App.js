@@ -8,32 +8,47 @@ export default function App() {
   const [restaurants, setRestaurants] = useState([]);
 
   const fetchRestaurants = () => {
+    console.log({ resInput });
+
     axios.get("/assets/data/db.json").then((response) => {
-      const items = response.data.restaurants;
+      const items = response.data.restaurants.filter((res) =>
+        resInput && resInput !== ""
+          ? res.description.name.toLowerCase().includes(resInput.toLowerCase())
+          : true
+      );
       setRestaurants(items);
     });
   };
 
   useEffect(() => {
     fetchRestaurants();
-  }, []);
+  }, [resInput]);
+
+  const handleRestaurantInputChange = (value) => {
+    setResInput(value);
+  };
 
   return (
     <div className="flex flex-col items-center">
       <TextInput
         className="mt-[2rem] w-[35%]"
         value={resInput}
-        onChange={(event) => setResInput(event.target.value)}
+        onChange={(event) => handleRestaurantInputChange(event.target.value)}
         placeholder="Enter restaurant name"
       />
-      <div className="flex items-center flex-wrap">
+      <div className="flex items-center flex-wrap gap-[3vw] mt-[5vh] justify-center overflow-scroll">
         {restaurants.map((restaurant) => (
-          <div className="h-[5rem] w-[10rem] border-[black] border-[1px] rounded-[5px] p-[2rem]">
+          <div className="h-[40vh] w-[40vw] border-[black] border-[1px] rounded-[5px] p-[2rem] overflow-auto cursor-pointer flex flex-col items-center justify-between gap-[0.7rem]">
             <img
-              className-="fit-content"
+              className="w-[80%] h-[70%]"
               src={restaurant.imageUrl}
               alt={restaurant.id}
             />
+            <h1 className="text-[1.1em]">{restaurant.description.name}</h1>
+            <h1 className="text-[1.1em]">{restaurant.description.rating}</h1>
+            <h1 className="text-[1.1em]">
+              ETA : {restaurant.description.rating}
+            </h1>
           </div>
         ))}
       </div>

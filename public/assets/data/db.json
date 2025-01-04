@@ -2,7 +2,7 @@
   "restaurants": [
     {
       "id": 1,
-      "imageUrl": "https://via.placeholder.com/150/0000FF/808080?text=Dominos",
+      "imageUrl": "/assets/images/dominos.jpg",
       "description": {
         "name": "Dominos",
         "rating": 4.5,
@@ -11,7 +11,7 @@
     },
     {
       "id": 2,
-      "imageUrl": "https://via.placeholder.com/150/FF0000/FFFFFF?text=McDonald's",
+      "imageUrl": "/assets/images/mcdonalds.jpg",
       "description": {
         "name": "McDonald's",
         "rating": 4.2,
@@ -20,7 +20,7 @@
     },
     {
       "id": 3,
-      "imageUrl": "https://via.placeholder.com/150/FFFF00/000000?text=KFC",
+      "imageUrl": "/assets/images/kfc.jpg",
       "description": {
         "name": "KFC",
         "rating": 4.3,
@@ -29,7 +29,7 @@
     },
     {
       "id": 4,
-      "imageUrl": "https://via.placeholder.com/150/00FF00/000000?text=Pizza+Hut",
+      "imageUrl": "/assets/images/pizza_hut.jpg",
       "description": {
         "name": "Pizza Hut",
         "rating": 4.1,
@@ -38,7 +38,7 @@
     },
     {
       "id": 5,
-      "imageUrl": "https://via.placeholder.com/150/FFFFFF/000000?text=Starbucks",
+      "imageUrl": "/assets/images/starbucks.jpg",
       "description": {
         "name": "Starbucks",
         "rating": 4.6,
