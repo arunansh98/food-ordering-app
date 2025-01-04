@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/food-ordering-app/static/css/main.b472487d.css",
+    "main.js": "/food-ordering-app/static/js/main.0d41ca73.js",
+    "index.html": "/food-ordering-app/index.html",
+    "main.b472487d.css.map": "/food-ordering-app/static/css/main.b472487d.css.map",
+    "main.0d41ca73.js.map": "/food-ordering-app/static/js/main.0d41ca73.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b472487d.css",
+    "static/js/main.0d41ca73.js"
+  ]
+}
