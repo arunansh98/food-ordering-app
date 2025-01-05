@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import TextInput from "./components/TextInput";
 import axios from "axios";
+import Rating from "./views/Rating";
 
 export default function App() {
   const [resInput, setResInput] = useState("");
@@ -8,8 +9,6 @@ export default function App() {
   const [restaurants, setRestaurants] = useState([]);
 
   const fetchRestaurants = () => {
-    console.log({ resInput });
-
     axios
       .get(`${process.env.PUBLIC_URL}/assets/data/db.json`)
       .then((response) => {
@@ -49,10 +48,13 @@ export default function App() {
               alt={restaurant.id}
             />
             <h1 className="text-[1.1em]">{restaurant.description.name}</h1>
-            <h1 className="text-[1.1em]">{restaurant.description.rating}</h1>
-            <h1 className="text-[1.1em]">
-              ETA : {restaurant.description.rating}
-            </h1>
+            <div className="flex flex-row items-center">
+              <h1 className="text-[1.1em] mr-[0.3rem]">
+                {restaurant.description.rating}
+              </h1>
+              <Rating rating={restaurant.description.rating} />
+            </div>
+            <h1 className="text-[1.1em]">ETA : {restaurant.description.eta}</h1>
           </div>
         ))}
       </div>
