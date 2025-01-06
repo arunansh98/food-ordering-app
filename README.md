@@ -1,6 +1,6 @@
 # Comments Widget
 
-A simple comments widget that allows users to add/edit/delete comments and add/edit/delete replies to a particular comment upto any nested level.
+A simple food ordering app in which you can see all the restaurants by default and then filter the restaurants based on some search input.
 
 # Live Demo
 Access the deployed frontend here:
