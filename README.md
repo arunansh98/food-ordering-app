@@ -1,4 +1,4 @@
-# Comments Widget
+# Food Ordering App
 
 A simple food ordering app in which you can see all the restaurants by default and then filter the restaurants based on some search input.
 
