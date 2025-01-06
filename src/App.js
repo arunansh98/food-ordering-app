@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import TextInput from "./components/TextInput";
 import axios from "axios";
 import Rating from "./views/Rating";
+import debounce from "lodash.debounce";
 
 export default function App() {
   const [resInput, setResInput] = useState("");
@@ -23,9 +24,18 @@ export default function App() {
       });
   };
 
+  const debouncedFetchRestaurants = useMemo(
+    () => debounce(fetchRestaurants, 500),
+    [resInput]
+  );
+
   useEffect(() => {
-    fetchRestaurants();
+    debouncedFetchRestaurants();
   }, [resInput]);
+
+  useEffect(() => {
+    return () => debouncedFetchRestaurants.cancel();
+  }, [debouncedFetchRestaurants]);
 
   const handleRestaurantInputChange = (value) => {
     setResInput(value);
