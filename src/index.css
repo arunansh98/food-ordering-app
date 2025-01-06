@@ -6,6 +6,10 @@
   .outline-auto {
     outline: auto;
   }
+
+  .shadow-black {
+    box-shadow: 1px 1px 6px 1px black;
+  }
 }
 
 input {
