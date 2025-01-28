@@ -1,0 +1,34 @@
+.trigger {
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+}
+
+.dropdown {
+  position: absolute;
+  border: 1px solid black;
+  width: inherit;
+  cursor: pointer;
+  z-index: 10000 !important;
+  @apply bg-[white];
+}
+
+.dropdown-parent {
+  @apply flex items-center flex-col justify-center text-center;
+}
+
+.dropdown-parent > h1 {
+  width: 100%;
+  border: 1px solid black;
+  border-width: 0px;
+  border-bottom-width: 1px;
+  padding: 1rem;
+  position: inherit;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
